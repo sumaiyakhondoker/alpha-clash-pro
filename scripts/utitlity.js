@@ -1,12 +1,19 @@
 function hideElementById(elementId){
     const element = document.getElementById(elementId);
-    element.classList.toggle('hidden');
+    element.classList.add('hidden');
 
 }
 
 function showElementById(elementId){
     const element = document.getElementById(elementId);
     element.classList.remove('hidden');
+
+}
+
+function getElementTextById(elementId){
+    const element = document.getElementById(elementId);
+    const text = element.innerText;
+    return text;
 
 }
 
@@ -32,4 +39,22 @@ function setBackgroundColor(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-orange-400')
 }
+
+function removeBackgroundColorById(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-orange-400')
+}
  
+
+// -----------life & score part (using function)-------------
+function getTextElementValueById(elementId){
+    const element = document.getElementById(elementId);
+    const valueText = element.innerText;
+    const value = parseInt(valueText);
+    return value;
+}
+
+function setElementValueById(elementId, value){
+    const element = document.getElementById(elementId);
+    element.innerText = value;
+}
